@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+html, body {
+  min-height: 100%;
+}
+
+
+/* TYPE DEFAULTS */
+body {
+  font: 300 1em/1 'Roboto', helvetica, arial, sans-serif;
+  background-image: linear-gradient(#eee, #bbb);
+  color: #111;
+  padding: 1em;
+}
+
+/* UTILITY CLASSES */
+.inline-list {
+  display: flex;
+  justify-content: flex-start;
+}
+.btn {
+  display: block;
+  background-color: slateblue;
+  color: white;
+  padding: 0.5em;
+  font-size: 1.25em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0.125em 0.125em 0 rgba(0,0,0,0.8);
+}
+.btn:hover {
+  text-shadow: none;
+}
+.contact {
+  padding: 1em;
+}
+.room {
+  flex-grow: 1;
+  text-align: center;
+}
+.room:first-child {
+  flex-grow: 0;
+}
+
+/* SPECIFIC CLASSES */
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 1em rgba(0,0,0,0.2);
+  width: auto;
+  /* max-width: 40em; */
+  margin: 1em auto;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.property-group {
+  padding: 1em;
+  border-bottom: 2px solid #eee;
+}
+.property-group:last-child {
+  border-bottom: none;
+}
+.room-icon {
+  height: 2em;
+  margin-right: 0.5em;
+}
+.address {
+  font-weight: 300;
+  font-size: 1em; 
+}
+.cost {
+  font-size: 2em;
+  margin: 0.5em 0;
+}
+.cost::before {
+  content: "$";
+}
+.features {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.features > li:not(:last-child)::after {
+  content: "\2219";
+  display: inline-block;
+  margin: 0 0.5em;
+}
+.realtor {
+  display: flex;
+  line-height: 1.5;
+}
+.realtor-face {
+  background-color: lightcoral;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1em;
+}
+.realtor-name {
+  font-weight: 700;
+}
+.realtor-num a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+
+
+
+/* Create one more media query 
+-Using device mode, evaluate the 320px case (smallest), make adjustments as needed
+-scale up the size slowly to determine where the first brakpoint should go- adjust my default
+- make the necessary adjustments to make this look pretty
+-continue to scale up and determine one more breakpoint fot this layout
+
+lab2
+Take a look at 3 news website and evaluate two pages (article, index/list) 
+
+*/
+
+@media screen and (min-width: 320px) {
+  body {
+    background-image: linear-gradient(orange, rebeccapurple);
+  }
+}
+
+@media screen and (min-width: 440px) {
+	body { background-image: linear-gradient(rgb(0, 255, 13), rgb(215, 218, 40)); }
+}
+
+@media screen and (min-width: 600px) {
+	body { background-image: linear-gradient(rgb(167, 40, 226), rgb(201, 64, 64)); }
+}
